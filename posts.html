@@ -156,6 +156,10 @@ window.Quarto = {
     <a class="nav-link active" href="./posts.html" aria-current="page"> 
 <span class="menu-text">Blog (under construction) 🚧</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./media/cv_dec24.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -309,6 +313,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
